@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Bui</title>
+    <link rel="stylesheet" href="Css/2.css" />
+    <link rel="stylesheet" href="Css/3.css" />
+    <link rel="stylesheet" href="Css/tutuc2.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <!--menu-->
+    ﻿<div id="main">
+        <!--Thanh menu trên cùng-->
+        <section>
+            <div class="menu-bar">
+                <img src="hinh/LOGO-BUITRAVEL.png"
+                     width="40"
+                     height="40" , class="log" />
+                <ul>
+                    <li><a href="HOME.html"><i class="fa fa-home"></i>Trang Chủ</a></li>
+                    <li><a href="Tour.html"><i class="fa fa-users"></i>Tour</a></li>
+                    <li><a href="TuTuc1.html"><i class="fa fa-clone"></i>Tự Túc</a></li>
+                    <li><a href="kinhnghiem.html"><i class="fa fa-angellist"></i>Kinh Nghiệm</a></li>
+                    <li><a href="#"><i class="fa fa-inr"></i>Diễn Đàn</a></li>
+                    <li><a href="lienhe.html"><i class="fa fa-phone"></i>Liên Hệ</a></li>
+                    <li id="btnDangKy"><a href="#">Đăng ký</a></li>
+                    <li id="btnDangNhap"><a href="#">Đăng nhập</a></li>
+                    <li id="chaomung">Chào <span id="spanusn" class="highlight"></span>,</li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!--Chào mừng username-->
+    <div id="chao2">
+        <div class="chaomung">Chào <span id="spanusn" class="highlight"></span>,</div>
+    </div>
+
+
+    <!--Form đăng ký-->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="close" onclick="closeForm()"></div>
+            <form action="ThongBaoDangKy.html" id="frm" onsubmit="return (validateForm());">
+                <div class="icontainer">
+                    <h1>Đăng ký</h1>
+                    <p>Vui lòng điền vào mẫu bên dưới để đăng ký tài khoản</p>
+                    <hr>
+
+                    <label for="email"><b>Email/Số điện thoại</b></label>
+                    <input type="text" placeholder="Nhập email hoặc số điện thoại" name="email" required id="email" />
+
+                    <label for="usn"><b>Username</b></label>
+                    <input type="text" placeholder="Nhập username bạn muốn" name="usn" required id="usn" />
+
+                    <label for="psw"><b>Mật khẩu</b></label>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw" id="psw" required>
+
+                    <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat" id="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" name="remember" style="margin-bottom:4%"> Nhớ mật khẩu
+                    </label>
+
+                    <p>Bằng việc đăng ký, tôi đồng ý với các  <a class="DangKy" href="#">Điều khoản & Điều kiện</a> và <a class="DangKy" href="#">Chính sách về quyền riêng tư</a> của Bụi Travel</p>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn" onclick="closeForm()">Huỷ</button>
+                        <button type="submit" class="signupbtn">Đăng ký</button>
+                    </div>
+                    <button type="button" onclick="CreateFile()">Luu du lieu</button>
+
+                    <div class="strike">
+                        <span>hoặc</span>
+                    </div>
+                    <!--Nút Facebook-->
+                    <div class="space">
+                        <div class="btnFB" ; onclick="window.location='http://facebook.com';">
+                            <div class="logoFB">
+                                <img src="image/fb.png" />
+                            </div>
+                            <div class="content">Đăng ký bằng Facebook</div>
+                        </div>
+                    </div>
+                    <!--Nút Gmail-->
+                    <div>
+                        <div class="btnGM" ; onclick="window.location='http://google.com';">
+                            <div class="logoGM">
+                                <img src="image/google.png" />
+                            </div>
+                            <div class="content">Đăng ký bằng Gmail</div>
+                        </div>
+                    </div>
+                    <p class="clearfloat">Bạn đã có tài khoản? <a class="DangKy" href="#" onclick="chuyenForm()">Đăng nhập</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Form đăng nhập-->
+    <div id="myModal2" class="modal">
+        <div class="modal-content">
+            <div class="close" onclick="closeForm2()"></div>
+            <form action="#" id="frm2">
+                <div class="icontainer">
+                    <h1>Đăng nhập</h1>
+                    <p>Vui lòng điền thông tin để đăng nhập</p>
+                    <hr>
+
+                    <label for="email2"><b>Email/Số điện thoại</b></label>
+                    <input type="text" placeholder="Nhập email hoặc số điện thoại" name="email2" required id="email2" />
+
+
+                    <label for="psw2"><b>Mật khẩu</b></label>
+                    <input type="password" placeholder="Nhập mật khẩu" name="psw2" id="psw2" required>
+
+                    <label>
+                        <input type="checkbox" name="remember" style="margin-bottom:4%"> Nhớ mật khẩu
+                    </label>
+
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn" onclick="closeForm2()">Huỷ</button>
+                        <button type="submit" class="signupbtn">Đăng nhập</button>
+                    </div>
+
+                    <div class="strike">
+                        <span>hoặc</span>
+                    </div>
+                    <!--Nút Facebook-->
+                    <div class="space">
+                        <div class="btnFB" ; onclick="window.location='http://facebook.com';">
+                            <div class="logoFB">
+                                <img src="image/fb.png" />
+                            </div>
+                            <div class="content">Đăng nhập bằng Facebook</div>
+                        </div>
+                    </div>
+                    <!--Nút Gmail-->
+                    <div>
+                        <div class="btnGM" ; onclick="window.location='http://google.com';">
+                            <div class="logoGM">
+                                <img src="image/google.png" />
+                            </div>
+                            <div class="content">Đăng nhập bằng Gmail</div>
+                        </div>
+                    </div>
+                    <p class="clearfloat">Bạn chưa có tài khoản? <a id="DangKy" href="#" onclick="chuyenForm2()">Đăng ký</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--Modal box đăng ký-->
+    <script type="text/javascript">
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("btnDangKy");
+
+
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        function closeForm() {
+            modal.style.display = "none";
+        }
+
+        function chuyenForm() {
+            modal.style.display = "none";
+            modal2.style.display = "block";
+        }
+    </script>
+
+    <!--Modal box đăng nhập-->
+    <script type="text/javascript">
+        // Get the modal
+        var modal2 = document.getElementById("myModal2");
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn2 = document.getElementById("btnDangNhap");
+
+        // When the user clicks on the button, open the modal
+        btn2.onclick = function () {
+            modal2.style.display = "block";
+        }
+
+
+
+        function closeForm2() {
+            modal2.style.display = "none";
+        }
+
+        function chuyenForm2() {
+            modal.style.display = "block";
+            modal2.style.display = "none";
+        }
+    </script>
+
+    <section class="features">
+        <h1>Một vài mẹo nhỏ cho chuyến đi của bạn trở nên thú vị hơn</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <span id="demo"></span>
+                            <a href="detailkhachsan1.html" target="_blank"><img src="hinh/doitien.jpg" height="300" width="300" /></a>
+
+
+                            <div class="price">
+
+                                <span><i class="fa fa-map-marker"></i>&nbsp;Mẹo nhỏ đổi tiền khi đi du lịch nước ngoài</span>
+
+                            </div>
+
+                            <div class="feature-detail">
+
+                                <p>Đổi tiền trước khi đi đi du lịch nước ngoài đôi khi khiến bạn bối rối, làm thể nào để tránh được các chi phí phát sinh không đáng có. Những mách nhỏ dưới dây sẽ giúp bạn không còn…</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <span id="demo3"></span>
+                            <a href="detailkhachsan2.html" target="_blank"><img src="hinh/ngu.jpg" height="300" width="300" /></a>
+
+
+                            <div class="price">
+
+                                <span><i class="fa fa-map-marker"></i>&nbsp;6 mẹo để có giấc ngủ ngon khi đi du lịch</span>
+
+                            </div>
+
+                            <div class="feature-detail">
+                                <p>Khi đi du lịch, việc có một giấc ngủ ngon là một trong những điều quan trọng để bạn có đủ sức khỏe và tỉnh táo để bắt đầu cuộc hành trình của mình. Nếu không ngủ đủ giấc, bạn…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <span id="demo2"></span>
+                            <a href="detailkhachsan3.html" target="_blank"><img src="hinh/thucung.jpg" height="300" width="300" /></a>
+
+
+                            <div class="price">
+
+                                <span><i class="fa fa-map-marker"></i>&nbsp;Kinh nghiệm đi du lịch cùng thú cưng</span>
+
+                            </div>
+
+                            <div class="feature-detail">
+
+                                <p>Khi chúng ta đi du lịch, thú cưng thường bị bỏ lại cô đơn ở nhà. Tuy nhiên mang theo chúng để làm một người bạn đồng hành trong chuyến đi cũng là một lựa chọn không tồi. Hãy ghi…</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
